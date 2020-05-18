@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { QlikProvider } from './context/QlikContext'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <QlikProvider>
+      <App />
+    </QlikProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

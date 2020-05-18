@@ -1,0 +1,30 @@
+ 1. Create application using Create-react-app 
+ 2. In your src folder add a 'utils' folder.
+ 3. In the 'utils' folder add the qlikApp connecting file (see attached)
+ 4. Now we have this file we need to build a config object and make the qlik app/object ready to use. 
+    First, we add a 'context' folder and adding a QlikContext file.
+ 5. For this we use 'useContext' to pass the data to the neccessary files
+ 6. In your index.js file, import your QlikProvider function and wrap your App in in your useContext provider.
+
+ 7. Create a React component, This one is called Page.
+ 8. import the qlik Object from the QlikContext that was made before
+ -----------------------------------------------------------------------
+ Now we have a Page component we can now build our webpage and display charts and data from qlik.
+ I would now console.log(app) to make sure you are connected and your empty object is ready to use.
+
+ 9.Get the Object from app using getObject() - this takes 2 params. First, asign your object and ID, and Second, get it using  the actual ObjectId from Qlik.
+ 10.Render this in a div tag by using the ID you chose. **You must also give the object a height and width**
+ 11.Add the Selection bar from qlik to your web page by adding one line of code
+ 12.If you want to go one step further you can custom this chart by using the Visualization API
+
+
+ FILE STRUCTURE
+ -src
+     -components
+        -Page
+     -context
+        -QlikContext
+     -utils
+        -qlikApp
+     -App.js 
+     -index.js  
